@@ -9,7 +9,247 @@
 <meta name="description"
       content="A futuristic 4K HD wallpaper gallery with Cyberpunk, Anime, Nature and Space wallpapers.">
 
-<style>
+<style>/* =================================
+   CYBER PINK TIKTOK FOLLOW BUTTON
+================================= */
+
+.tiktok-follow-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 20px 45px;
+}
+
+.tiktok-follow {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    min-width: 230px;
+
+    padding: 13px 17px;
+
+    color: #fff;
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 45, 214, .45);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 20, 190, .16),
+            rgba(130, 40, 255, .13)
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 200, .18),
+        inset 0 0 20px rgba(255, 255, 255, .025);
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+/* Animated neon line */
+
+.tiktok-follow::before {
+    content: "";
+
+    position: absolute;
+
+    left: -100%;
+    top: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff2bd6,
+            #b84dff,
+            transparent
+        );
+
+    animation:
+        tiktokScan 2.8s linear infinite;
+}
+
+@keyframes tiktokScan {
+
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+/* Hover */
+
+.tiktok-follow:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.025);
+
+    border-color:
+        rgba(255, 45, 214, .85);
+
+    box-shadow:
+        0 0 18px rgba(255, 43, 214, .35),
+        0 0 45px rgba(255, 43, 214, .18),
+        inset 0 0 25px rgba(255, 43, 214, .07);
+}
+
+/* TikTok icon */
+
+.tiktok-icon {
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 13px;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff2bd6,
+            #8b5cf6
+        );
+
+    box-shadow:
+        0 0 16px rgba(255, 43, 214, .5);
+
+    text-shadow:
+        2px 2px 0 #00f2ea;
+
+    transition:
+        transform .3s ease;
+}
+
+.tiktok-follow:hover .tiktok-icon {
+
+    transform:
+        rotate(-8deg)
+        scale(1.08);
+
+}
+
+/* Text */
+
+.tiktok-text {
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.15;
+
+    flex: 1;
+}
+
+.tiktok-text small {
+
+    color: #aaa5b5;
+
+    font-size: 10px;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+.tiktok-text strong {
+
+    margin-top: 3px;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff8bea,
+            #c084fc
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+/* Arrow */
+
+.tiktok-arrow {
+
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: #ff62dc;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.tiktok-follow:hover .tiktok-arrow {
+
+    transform:
+        translate(3px,-3px);
+
+    background:
+        rgba(255,43,214,.15);
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .tiktok-follow {
+
+        width: min(100%, 300px);
+
+    }
+
+}
 /* =========================================================
    RESET
 ========================================================= */
